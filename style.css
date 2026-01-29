@@ -1,245 +1,246 @@
-*{
-     padding: 0;
+* {
+    padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
-.outer{
-    height: 550px;
+
+.outer {
     width: 100%;
-    background-color:#d6f0fa;
-    padding-left: 50px;
+    min-height: 100vh;
+    background-color: #d6f0fa;
+    padding: 20px;
+    overflow-x: hidden;
 }
-.pages{
+
+.pages {
     color: grey;
-    margin-left: 100px;
-    margin-top: 50px;
+    margin: 20px 0;
+    font-size: 0.9rem;
 }
-.images{
-    height:600px;
-    width: 600px;
+
+.images {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    flex-direction:row;
+    flex-wrap: wrap;
+    gap: 40px;
+    height: auto;
 }
-.image{
-    height:600px;
-    width: 600px;
+
+.image {
+    flex: 1;
+    min-width: 300px;
 }
-.image1{
-    margin-top: 20px;
-    height:300px;
-    width: 550px;
+
+.image1 {
+    width: 100%;
+    height: 350px;
     background-image: url("https://images3.alphacoders.com/782/thumb-1920-782784.jpg");
-    background-size: cover ;
-    margin-left: 100px;
+    background-size: cover;
+    background-position: center;
     border: 1px solid blue;
     border-radius: 5px;
     transition: background-image 0.5s ease-in-out;
+    margin: 0;
 }
-.more{
-    margin-left: 70px;
-    padding: 30px;
-    height: 150px;
-    width: 550px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.img1:hover{
-   transform: scale(1.1,1.1);
-}
-.img2:hover{
-    transform: scale(1.1,1.1);
-}
-.img3:hover{
-    transform: scale(1.1,1.1);
-}
-.img4:hover{
-    transform: scale(1.1,1.1);
-}     
 
-.img5:hover{
-    transform: scale(1.1,1.1);
-}
-.img6:hover{
-    transform: scale(1.1,1.1);
-}
-.image:has(.img1:hover) .image1{
-   background-image: url("https://images.wallpapersden.com/image/download/stardew-valley_64265_1920x1080.jpg");
-}
-.image:has(.img2:hover) .image1{
-     background-image: url("https://wallpaperaccess.com/full/3639199.jpg");
-}
-.image:has(.img3:hover) .image1{
-    background-image: url("https://static1.thegamerimages.com/wordpress/wp-content/uploads/2019/03/Stardew-Valley-Farm-Layout-01.jpg");
-}
-.image:has(.img4:hover) .image1{
-    background-image: url("https://i.pinimg.com/originals/d0/6d/6b/d06d6bb24eebc6e806238d9a344fe3db.jpg");
-}
-.image:has(.img5:hover) .image1{
-    background-image: url("https://tse4.mm.bing.net/th/id/OIP.7SxqO2x9y_RzeRufEbRIAwHaHa?cb=defcachec2&pid=ImgDet&w=474&h=474&rs=1&o=7&rm=3");
-}
-.image:has(.img6:hover) .image1{
-    background-image: url("https://tse2.mm.bing.net/th/id/OIP.au57XNcflB66uSQ-CIhjLwHaEK?cb=defcachec2&rs=1&pid=ImgDetMain&o=7&rm=3");
-}
-.img1{
-    height:80px;
-    width: 120px;
-    background-image: url("https://images.wallpapersden.com/image/download/stardew-valley_64265_1920x1080.jpg");
-    background-size: cover;
-    border: 2px solid black;
-    border-radius: 3px;
-}
-.img2{
-    margin-left: 10px;
-    height:80px;
-    width: 120px;
-    background-image: url("https://wallpaperaccess.com/full/3639199.jpg");
-    background-size: cover;
-    border: 1px solid black;
-    border-radius: 3px;
-}
-.img3{
-    margin-left: 10px;
-    height:80px;
-    width: 120px;
-    background-image: url("https://static1.thegamerimages.com/wordpress/wp-content/uploads/2019/03/Stardew-Valley-Farm-Layout-01.jpg");
-    background-size: cover;
-    border: 1px solid black;
-    border-radius: 3px;
-}
-.img4{
-    margin-left: 10px;
-    height:80px;
-    width: 120px;
-    background-image: url("https://i.pinimg.com/originals/d0/6d/6b/d06d6bb24eebc6e806238d9a344fe3db.jpg");
-    background-size: cover;
-    border: 1px solid black;
-    border-radius: 3px;
-}
-.img5{
-    margin-left: 10px;
-    height:80px;
-    width: 120px;
-    background-image: url("https://tse4.mm.bing.net/th/id/OIP.7SxqO2x9y_RzeRufEbRIAwHaHa?cb=defcachec2&pid=ImgDet&w=474&h=474&rs=1&o=7&rm=3");
-    background-size: cover;
-    border: 1px solid black;
-    border-radius: 3px;
-}
-.img6{
-    margin-left: 10px;
-    height:80px;
-    width: 120px;
-    background-image: url("https://tse2.mm.bing.net/th/id/OIP.au57XNcflB66uSQ-CIhjLwHaEK?cb=defcachec2&rs=1&pid=ImgDetMain&o=7&rm=3");
-    background-size: cover;
-    border: 1px solid black;
-    border-radius: 3px;
-}
-.price{
-    height:700px;
-    width: 750px;
-    margin-left: 100px;
-}
-.switch{
+.more {
+    width: 100%;
     margin-top: 20px;
-    display:flex;
-    align-items: center;
-    margin-left: 40px;
-    height: 30px;
-    width:300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+    height: auto;
+}
+
+.more div {
+    height: 60px;
+    width: 90px;
+    background-size: cover;
+    border: 1px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.more div:hover {
+    transform: scale(1.1);
+}
+
+.img1 { background-image: url("https://images.wallpapersden.com/image/download/stardew-valley_64265_1920x1080.jpg"); }
+.img2 { background-image: url("https://wallpaperaccess.com/full/3639199.jpg"); }
+.img3 { background-image: url("https://static1.thegamerimages.com/wordpress/wp-content/uploads/2019/03/Stardew-Valley-Farm-Layout-01.jpg"); }
+.img4 { background-image: url("https://i.pinimg.com/originals/d0/6d/6b/d06d6bb24eebc6e806238d9a344fe3db.jpg"); }
+.img5 { background-image: url("https://tse4.mm.bing.net/th/id/OIP.7SxqO2x9y_RzeRufEbRIAwHaHa?cb=defcachec2&pid=ImgDet&w=474&h=474&rs=1&o=7&rm=3"); }
+.img6 { background-image: url("https://tse2.mm.bing.net/th/id/OIP.au57XNcflB66uSQ-CIhjLwHaEK?cb=defcachec2&rs=1&pid=ImgDetMain&o=7&rm=3"); }
+
+.image:has(.img1:hover) .image1 { background-image: url("https://images.wallpapersden.com/image/download/stardew-valley_64265_1920x1080.jpg"); }
+.image:has(.img2:hover) .image1 { background-image: url("https://wallpaperaccess.com/full/3639199.jpg"); }
+.image:has(.img3:hover) .image1 { background-image: url("https://static1.thegamerimages.com/wordpress/wp-content/uploads/2019/03/Stardew-Valley-Farm-Layout-01.jpg"); }
+.image:has(.img4:hover) .image1 { background-image: url("https://i.pinimg.com/originals/d0/6d/6b/d06d6bb24eebc6e806238d9a344fe3db.jpg"); }
+.image:has(.img5:hover) .image1 { background-image: url("https://tse4.mm.bing.net/th/id/OIP.7SxqO2x9y_RzeRufEbRIAwHaHa?cb=defcachec2&pid=ImgDet&w=474&h=474&rs=1&o=7&rm=3"); }
+.image:has(.img6:hover) .image1 { background-image: url("https://tse2.mm.bing.net/th/id/OIP.au57XNcflB66uSQ-CIhjLwHaEK?cb=defcachec2&rs=1&pid=ImgDetMain&o=7&rm=3"); }
+
+.price {
+    flex: 1;
+    min-width: 300px;
+    height: auto;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.switch {
+    margin-bottom: 10px;
     text-decoration: underline #e60012;
-    font-size: 25px;
+    font-size: 1.2rem;
 }
-.name{
-    height: 80px;
-    width:400px;
-    display:flex;
+
+.name h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.amount {
+    display: flex;
     align-items: center;
-    margin-left: 38px;
-    font-size: 21px;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
 }
-.amount{
-    height: 100px;
-    width:400px;
-    display:flex;
-    align-items: center;
-    margin-left: 38px;
-    font-size: 20px;
-    justify-content:space-between;
-}
-.icon{  
-    width:50px;
-    margin-right: 10px;
+
+.icon {
     color: #e60012;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
-.download{
-    border: 1px solid #e60012;
-    border-radius: 4px;
-    margin-left:20px;
-    width:400px;
-    height: 70px;
-    color:white;
+
+.download {
+    width: 100%;
+    max-width: 400px;
+    height: 60px;
     background-color: #e60012;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 35px;
+    font-size: 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
 }
-.download:hover{
-   background-color:blue;
+
+.download:hover {
+    background-color: blue;
 }
-.description{
-    height: 550px;
+
+.description {
     width: 100%;
-    padding-left: 60px;
-}
-.description{
-    height:600px;
-    width: 1100px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
     display: flex;
-    flex-direction:row;
+    flex-wrap: wrap;
+    gap: 40px;
+    height: auto;
 }
-.read{
-    margin-top: 20px;
-    height:300px;
-    width: 550px;
-    margin-left: 120px;
+
+.read {
+    flex: 1;
+    min-width: 300px;
 }
-.pic{
-    margin-top: 20px;
-    height:270px;
-    width: 520px;
+
+.pic {
+    flex: 1;
+    min-width: 300px;
+    height: 300px;
     background-image: url("https://images3.alphacoders.com/782/thumb-1920-782784.jpg");
-    background-size: cover ;
-    margin-left: 20px;
+    background-size: cover;
+    background-position: center;
     border: 1px solid blue;
     border-radius: 5px;
 }
-.hidden{
-    display: none;
-}
-/* hide checkbox */
-#read-toggle{
-    display: none;
-}
 
-/* show hidden text when checked */
-#read-toggle:checked ~ .hidden{
-    display: block;
-}
+.hidden { display: none; }
+#read-toggle { display: none; }
 
-/* default button text */
-.read-more::after{
+#read-toggle:checked ~ .hidden { display: block; margin-bottom: 15px;}
+
+.read-more::after {
     content: "+ Read More";
-    color:#e60012;
+    color: #e60012;
     font-weight: bold;
 }
 
-/* change text on click */
-#read-toggle:checked ~ .read-more::after{
+#read-toggle:checked ~ .read-more::after {
     content: "− Read Less";
 }
 
-/* cursor feedback */
-.read-more{
-    cursor: pointer;
+.read-more { cursor: pointer; display: block; margin-top: 10px; }
+
+@media (max-width: 900px) {
+    .images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image, .price {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .image1 {
+        height: 300px;
+    }
+
+    .price {
+        align-items: center;
+    }
+    
+    .amount, .download {
+        max-width: 100%;
+    }
+
+    .description {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 600px) {
+    .outer {
+        padding: 10px;
+    }
+
+    .pages {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .image1 {
+        height: 220px;
+    }
+
+    .more div {
+        width: 60px;
+        height: 40px;
+    }
+
+    .name h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .download {
+        font-size: 1.2rem;
+    }
+    
+    .pic {
+        height: 200px;
+    }
 }
